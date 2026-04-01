@@ -1,0 +1,409 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Farmer",
+      "email": "farmer@example.com",
+      "password": "farmer123",
+      "role": "farmer",
+      "farmId": 1,
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Sarah Smith",
+      "email": "vet@example.com",
+      "password": "vet123",
+      "role": "veterinarian",
+      "licenseNumber": "VET12345",
+      "specialization": "Poultry & Swine",
+      "clinic": "City Veterinary Hospital",
+      "phone": "+1234567890",
+      "createdAt": "2024-01-10T09:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "organization": "Biosecurity Authority",
+      "securityKey": "ADMIN2024",
+      "createdAt": "2024-01-01T08:00:00Z"
+    },
+    {
+      "name": "RamaKrishana",
+      "email": "ramakrishana@gmail.com",
+      "password": "Ram@123",
+      "role": "farmer",
+      "createdAt": "2026-03-26T12:35:07.500Z",
+      "id": "13MfuMFxiYU"
+    },
+    {
+      "name": "Dr.Srilekha",
+      "email": "srilekha@gmail.com",
+      "password": "Srilekha@123",
+      "role": "veterinarian",
+      "licenseNumber": "VET5544",
+      "specialization": "Research Analyst",
+      "clinic": "Apollo Care",
+      "createdAt": "2026-03-26T12:47:19.237Z",
+      "id": "J8hCV4kpVC0"
+    }
+  ],
+  "farms": [
+    {
+      "id": "1",
+      "userId": 1,
+      "name": "Green Valley Poultry Farm",
+      "farmType": "poultry",
+      "location": "Springfield, North Region",
+      "capacity": 5000,
+      "biosecurityScore": 85,
+      "healthStatus": "Good",
+      "lastInspection": "2024-01-20T10:00:00Z",
+      "establishedDate": "2020-01-15",
+      "contactNumber": "+1234567890"
+    },
+    {
+      "userId": "13MfuMFxiYU",
+      "name": "Ramkrishana",
+      "farmType": "poultry",
+      "location": "Raidurgam",
+      "capacity": 0,
+      "biosecurityScore": 78,
+      "healthStatus": "Good",
+      "lastInspection": "2026-03-26T12:35:07.631Z",
+      "establishedDate": "2026-03-26",
+      "id": "ucB0JMOQ1Ug"
+    }
+  ],
+  "riskAssessments": [
+    {
+      "id": "1",
+      "farmId": 1,
+      "date": "2024-01-25T09:00:00Z",
+      "riskLevel": "medium",
+      "score": 45,
+      "factors": [
+        {
+          "name": "Biosecurity Measures",
+          "score": 65,
+          "impact": "high"
+        },
+        {
+          "name": "Vaccination Status",
+          "score": 80,
+          "impact": "medium"
+        },
+        {
+          "name": "Farm Hygiene",
+          "score": 70,
+          "impact": "high"
+        },
+        {
+          "name": "Surrounding Farms",
+          "score": 40,
+          "impact": "medium"
+        }
+      ],
+      "recommendations": [
+        "Install foot baths at all entry points",
+        "Implement visitor logging system",
+        "Increase cleaning frequency",
+        "Review vaccination schedule"
+      ],
+      "assessedBy": "John Farmer"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "1",
+      "title": "Avian Influenza Outbreak",
+      "diseaseType": "avianInfluenza",
+      "severity": "critical",
+      "location": "North Region",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "radius": 15,
+      "date": "2024-01-28T08:00:00Z",
+      "description": "Confirmed cases of H5N1 detected in wild birds. Immediate biosecurity measures required.",
+      "actionsRequired": [
+        "Increase disinfection",
+        "Restrict movement",
+        "Monitor birds daily"
+      ],
+      "status": "active",
+      "createdBy": "admin",
+      "createdById": 3
+    },
+    {
+      "id": "2",
+      "title": "African Swine Fever Alert",
+      "diseaseType": "africanSwineFever",
+      "severity": "warning",
+      "location": "South Region",
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "radius": 20,
+      "date": "2024-01-27T14:00:00Z",
+      "description": "Suspected cases reported in neighboring district. Enhanced surveillance recommended.",
+      "actionsRequired": [
+        "Check feed sources",
+        "Implement quarantine",
+        "Report sick animals"
+      ],
+      "status": "active",
+      "createdBy": "veterinarian",
+      "createdById": 2
+    },
+    {
+      "title": "BirdFlue",
+      "severity": "warning",
+      "location": "Raidurgam",
+      "description": "Emergency Situation Outbreak",
+      "date": "2026-03-27T06:40:20.178Z",
+      "status": "active",
+      "createdBy": "veterinarian",
+      "createdById": "J8hCV4kpVC0",
+      "id": "YvWWR3KffmQ"
+    },
+    {
+      "title": "Bird Flue",
+      "severity": "warning",
+      "location": "Kukatpally",
+      "description": "I dont Know",
+      "date": "2026-03-27T13:00:58.840Z",
+      "status": "active",
+      "createdBy": "veterinarian",
+      "createdById": "J8hCV4kpVC0",
+      "id": "33UD76Yv7jg"
+    }
+  ],
+  "hygieneChecklists": [
+    {
+      "id": "1",
+      "farmId": 1,
+      "date": "2024-01-28T09:00:00Z",
+      "items": [
+        {
+          "name": "Foot baths at entrances",
+          "completed": true,
+          "score": 10,
+          "notes": "Well maintained"
+        },
+        {
+          "name": "Protective clothing available",
+          "completed": true,
+          "score": 10,
+          "notes": "Sufficient stock"
+        },
+        {
+          "name": "Disinfection protocol followed",
+          "completed": false,
+          "score": 0,
+          "notes": "Needs improvement"
+        },
+        {
+          "name": "Waste management",
+          "completed": true,
+          "score": 8,
+          "notes": "Regular disposal"
+        },
+        {
+          "name": "Pest control measures",
+          "completed": true,
+          "score": 9,
+          "notes": "Effective"
+        }
+      ],
+      "overallScore": 74,
+      "inspector": "John Farmer",
+      "nextInspection": "2024-02-04T09:00:00Z"
+    }
+  ],
+  "hygieneRecords": [
+    {
+      "id": "1",
+      "farmId": 1,
+      "date": "2024-01-28T09:00:00Z",
+      "activity": "Daily Hygiene Checklist",
+      "performedBy": "John Farmer",
+      "verificationStatus": "pending",
+      "score": 74,
+      "notes": "Regular check completed"
+    },
+    {
+      "farmId": "ucB0JMOQ1Ug",
+      "date": "2026-03-27T12:56:39.467Z",
+      "activity": "Daily Checklist",
+      "performedBy": "RamaKrishana",
+      "verificationStatus": "pending",
+      "score": 57,
+      "id": "cc5FA3Epd20"
+    },
+    {
+      "farmId": "ucB0JMOQ1Ug",
+      "date": "2026-03-27T12:56:59.774Z",
+      "activity": "Daily Checklist",
+      "performedBy": "RamaKrishana",
+      "verificationStatus": "pending",
+      "score": 43,
+      "id": "D_daYNWcryU"
+    },
+    {
+      "farmId": "ucB0JMOQ1Ug",
+      "date": "2026-03-28T09:18:59.221Z",
+      "activity": "Daily Checklist",
+      "performedBy": "RamaKrishana",
+      "verificationStatus": "pending",
+      "score": 100,
+      "id": "hnAN2GwX208"
+    }
+  ],
+  "trainingModules": [
+    {
+      "id": "1",
+      "title": "Biosecurity Fundamentals",
+      "category": "biosecurity",
+      "description": "Learn essential biosecurity practices to protect your livestock from diseases.",
+      "duration": 45,
+      "difficulty": "beginner",
+      "content": "Module content with videos, articles, and quizzes",
+      "completedBy": [
+        1
+      ],
+      "createdAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Avian Influenza Prevention",
+      "category": "diseasePrevention",
+      "description": "Comprehensive guide to preventing and managing Avian Influenza outbreaks.",
+      "duration": 60,
+      "difficulty": "intermediate",
+      "content": "Advanced content on disease prevention",
+      "completedBy": [],
+      "createdAt": "2024-01-05T00:00:00Z"
+    },
+    {
+      "id": "3",
+      "title": "African Swine Fever Management",
+      "category": "emergencyResponse",
+      "description": "Emergency response protocols for African Swine Fever outbreaks.",
+      "duration": 50,
+      "difficulty": "advanced",
+      "content": "Emergency protocols and response strategies",
+      "completedBy": [],
+      "createdAt": "2024-01-10T00:00:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Farm Hygiene Best Practices",
+      "category": "farmManagement",
+      "description": "Learn proper cleaning, disinfection, and waste management techniques.",
+      "duration": 40,
+      "difficulty": "beginner",
+      "content": "Best practices for farm hygiene",
+      "completedBy": [
+        1
+      ],
+      "createdAt": "2024-01-15T00:00:00Z"
+    }
+  ],
+  "consultations": [
+    {
+      "id": "1",
+      "farmId": 1,
+      "farmerId": 1,
+      "farmerName": "John Farmer",
+      "veterinarianId": null,
+      "veterinarianName": null,
+      "date": "2024-01-28T10:00:00Z",
+      "topic": "Biosecurity Review",
+      "message": "I need a review of my farm's biosecurity protocols.",
+      "status": "pending",
+      "messages": [
+        {
+          "from": "farmer",
+          "message": "I need a review of my farm's biosecurity protocols.",
+          "date": "2024-01-28T10:00:00Z"
+        }
+      ]
+    }
+  ],
+  "healthReports": [
+    {
+      "id": "1",
+      "farmId": 1,
+      "date": "2024-01-20T14:00:00Z",
+      "veterinarian": "Dr. Sarah Smith",
+      "veterinarianId": 2,
+      "findings": "All birds healthy. Vaccination up to date.",
+      "recommendations": "Continue current biosecurity measures. Schedule next inspection in 3 months.",
+      "status": "completed"
+    },
+    {
+      "farmId": null,
+      "date": "2026-03-26T12:48:17.960Z",
+      "veterinarian": "Dr.Srilekha",
+      "findings": "nothing",
+      "status": "completed",
+      "id": "6_FVlzb9iMw"
+    }
+  ],
+  "trainingmoduleCompletions": [
+    {
+      "id": "1",
+      "userId": 1,
+      "trainingModuleId": 1,
+      "dateCompleted": "2024-01-28T11:00:00Z"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "trainingModuleId": 4,
+      "dateCompleted": "2024-01-28T11:30:00Z"
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": "1",
+      "userId": 1,
+      "message": "New disease alert in your area: Avian Influenza",
+      "read": false,
+      "date": "2024-01-28T08:00:00Z",
+      "type": "alert",
+      "relatedId": 1
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "message": "Risk assessment due for your farm",
+      "read": false,
+      "date": "2024-01-27T09:00:00Z",
+      "type": "reminder",
+      "relatedId": null
+    }
+  ],
+  "systemStats": {
+    "totalUsers": 3,
+    "totalFarms": 2,
+    "totalAlerts": 2,
+    "activeAlerts": 2,
+    "avgBiosecurityScore": 78.5,
+    "totalTrainingsCompleted": 2,
+    "lastUpdated": "2024-01-28T12:00:00Z"
+  },
+    "appSettings": {
+        "alertRadius": 20,
+        "notificationPreferences": {
+        "email": true,
+        "sms": false,
+        "inApp": true
+        },
+        "dataRetentionPeriod": 365,
+        "maintenanceMode": false
+    }
+}
